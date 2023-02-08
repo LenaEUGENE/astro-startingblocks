@@ -1,0 +1,25 @@
+---
+// styles import
+import '@styles/global.css';
+// components import
+import TheHead from "@components/TheHead.astro";
+// images and icons import
+
+const { title = "Website name", description = "Website description"} =  Astro.props as props;
+
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<TheHead />
+
+<body class="font-inter min-h-screen bg-offWhite text-base">
+  <div class="pageContainer relative h-screen ">
+   
+    <slot />
+  
+  </div>
+ 
+</body>
+
+</html>
