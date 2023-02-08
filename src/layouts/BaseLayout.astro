@@ -4,6 +4,7 @@ import '@styles/global.css';
 // components import
 import TheHead from "@components/TheHead.astro";
 import TheNavbar from "@components/TheNavbar.astro";
+import TheFooter from '@components/TheFooter.astro';
 // images and icons import
 
 const { title = "Website name", description = "Website description"} =  Astro.props as props;
@@ -15,13 +16,15 @@ const { title = "Website name", description = "Website description"} =  Astro.pr
 
 <TheHead />
 
-<body class="font-inter min-h-screen bg-offWhite text-base">
+<body class="">
   <TheNavbar />
   <div class="">
    
     <slot />
   
   </div>
+
+  <TheFooter />
  
 </body>
 

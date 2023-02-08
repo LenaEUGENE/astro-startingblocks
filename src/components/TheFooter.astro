@@ -1,0 +1,17 @@
+---
+
+---
+
+<footer id="footer" class="mt-auto w-full bg-brand text-gray-50 py-6">
+  <div class="container">
+    <small>Copyright ©<span id="copyrightYear"></span> | Astro StartingBlocks</small>
+  </div>
+</footer>
+
+<script>
+  document.querySelector("#copyrightYear").textContent = 
+  new Date()
+    .getFullYear()
+    .toString();
+
+</script>

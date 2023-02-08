@@ -332,10 +332,15 @@ summary {
 
   html {
     font-family: Inter, system-ui, sans-serif;
+		height: 100%;
   }
 
   body {
+
     font-size: var(--text-base-size);
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
   }
 
   section {
