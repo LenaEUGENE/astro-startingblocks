@@ -1,0 +1,32 @@
+---
+import {Icon} from 'astro-icon';
+
+import navData from '@data/navData';
+import Link from '@components/Link.astro';
+
+import logo from '@images/logo.svg';
+
+---
+<nav id="TheNavbar" aria-label='Top nav' class='w-full bg-gray-50'>
+  <div class="container w-[90%] max-w-[1344px]">
+    <div class="navbar--wrapper w-full flex justify-between items-center p-4 ">
+      <a href="/"class='logo' aria-label="vers page d'accueil" >
+        <img 
+          src={logo}
+          class="w-32 text-brand hover:text-accent"
+        />
+      </a>
+      <ul class='w-full flex justify-end items-center gap-6'>
+        {navData.map
+          ((item) => 
+          <Link
+            href={item.path}
+            text={item.name}
+            classes="navLink hover:text-accent transition duration-400"
+          />
+          )
+        }
+      </ul>
+    </div>
+  </div>
+</nav>

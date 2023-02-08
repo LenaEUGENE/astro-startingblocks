@@ -1,0 +1,39 @@
+---
+import {Icon} from 'astro-icon';
+
+interface Props {
+  text: string;
+  href: string;
+  icon?: {
+    name: string;
+  }
+  classes?: string;
+}
+
+const { 
+  text,
+  href,
+  icon,
+  classes,
+} = Astro.props as Props; 
+---
+
+<a 
+  href={href}
+  class:list={[
+    "link",
+    classes,
+  ]}
+>
+
+<span>{text}</span>
+{
+  icon && (
+    <Icon 
+      name = {icon.name}
+      height="24"
+      weight="24"
+    />
+  )
+}
+</a>
