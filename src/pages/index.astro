@@ -1,9 +1,16 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 import {Icon} from 'astro-icon';
+import { Image } from '@astrojs/image/components';
+
 
 import Link from '@components/Link.astro';
 import Card from '@components/Card.astro';
+
+
+// import images
+
+import hero from '@images/hero.jpg';
 
 
 
@@ -14,13 +21,40 @@ import Card from '@components/Card.astro';
 	<main class="mx-auto">
 		<section aria-labelledby="hero-title">
 			<div class="container">
-				<h1 id="hero-title" >Astro + Tailwindcss <span class="text-accent">StartingBlocks</span></h1>
-				<p class="">
-					To always be ready to build small and simple static website.
-				</p>
+				<div class="heroWrapper">
+					<div class="mx-auto text-center max-w-[85ch] space-y-6 ">
+						<div class="groupTitle">
+							<h1 id="hero-title" class="display leading-snug ">
+								To infinity and beyond!
+							</h1>
+							<p class="subheading text-2xl font-medium">Astro is sending you to space, then to another dimension.</p>
+		
+						</div>
+						<button
+							class="group relative inline-block uppercase text-sm font-medium text-light focus:outline-none focus:ring"
+							href="/"
+							>
+							<span
+							class="absolute inset-0 rounded-xl border border-brand group-active:border-brand"
+							></span>
+							<span
+							class="flex items-center gap-2 rounded-xl border border-brand bg-brand px-8 py-3 transition-transform active:border-brand active:bg-brand group-hover:-translate-x-1 group-hover:-translate-y-1 text-offWhite"
+							>
+							Ready? Steady? Go!
+							<Icon name='ri:send-plane-fill' class='w-6 text-offWhite' />
+							</span>
+						</button>
+				<!-- Border -->
+					</div>
+					<img 
+						class="w-full max-w-4xl mx-auto aspect-video object-cover object-top mt-8 rounded-xl shadow-xl sm:mt-20"
+						src={hero} alt=""
+					/>
+				</div>
 			</div>
 		</section>
 
+		<!-- Features -->
 		<div aria-label="Features" class="py-8 bg-slate-100 sm:py-12">
 
 			<div class="container">
