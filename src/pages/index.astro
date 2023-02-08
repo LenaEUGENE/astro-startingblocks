@@ -1,18 +1,60 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
+import {Icon} from 'astro-icon';
+
+import Link from '@components/Link.astro';
+import Card from '@components/Card.astro';
+
+
 
 // import components 
 ---
 
 <BaseLayout title="This is Astro startingblocks">
-	<main>
-		<section>
+	<main class="mx-auto">
+		<section aria-labelledby="hero-title">
 			<div class="container">
-				<h1 class="" >Astro + Tailwindcss <span class="text-accent">StartingBlocks</span></h1>
+				<h1 id="hero-title" >Astro + Tailwindcss <span class="text-accent">StartingBlocks</span></h1>
 				<p class="">
 					To always be ready to build small and simple static website.
 				</p>
 			</div>
 		</section>
+
+		<div aria-label="Features" class="py-8 bg-slate-100 sm:py-12">
+
+			<div class="container">
+				<div class="featuresWrapper grid grig-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 py-8 md:py-12 lg:py-14">
+
+					<Card
+						icon={{
+							name: 'ri:rocket-fill',
+							side: 'left',
+						}}
+						title="Rocket to Mars"
+						description="The adventure we've been waiting for since. Jianbing post-ironic bushwick iPhone, crucifix same tacos small batch irony keffiyeh."
+						/>
+						<Card
+						icon={{
+							name: 'ri:rocket-fill',
+							side: 'left',
+						}}
+						title="Rocket to Venus"
+						description="To infinity and beyond! The adventure we've been waiting for since. Jianbing post-ironic bushwick iPhone, crucifix same tacos small batch irony keffiyeh."
+						/>
+						<Card
+						icon={{
+							name: 'ri:rocket-fill',
+							side: 'left',
+						}}
+						title="Rocket to Titan"
+						description="Be a pionneer and start the journey to a brand new world. Jianbing post-ironic bushwick iPhone, crucifix same tacos small batch irony keffiyeh."
+						/>
+			
+				</div>
+			</div>
+		</div>
+
+
 	</main>
 </BaseLayout>

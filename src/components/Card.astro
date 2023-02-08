@@ -1,0 +1,39 @@
+---
+import { Icon } from 'astro-icon';
+
+interface Props {
+  title: string;
+  description: string,
+  icon:string,
+  classes?: string;
+}
+
+const {
+  title,
+  description,
+  icon,
+  classes,
+  ...rest
+ } =  Astro.props as Props;
+---
+
+<article
+ class:list={[
+  "Card",
+  classes,
+ ]}
+ {...rest}
+>
+  <div class="card_content bg-white p-6 rounded-xl text-dark min-h-full">
+    <div class="feature-card--groupTitle">
+      <!-- icon title  -->
+      <Icon name={icon.name} class="icon card-icon w-8 text-accent "/>
+      <!-- card title -->
+      <h4>{title}</h4>
+    </div>
+    
+    <!-- description -->
+    <p class="description">{description}</p>
+    
+  </div>
+</article>
